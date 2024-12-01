@@ -1,0 +1,42 @@
+{
+  "files.exclude": {
+    "node_modules/": true,
+    ".vscode/": true,
+    ".expo/": true,
+    "ios/": true,
+    "android/": true,
+    ".gitignore": true,
+    "babel.config.js": true,
+    "package-lock.json": true,
+    ".eslintrc.js": true,
+    "tsconfig.json": true,
+    ".prettierrc": true,
+    "desktop.ini": true,
+    "metro.config.js": true,
+    "index.d.ts": true,
+    ".eslintignore": true,
+    "eas.json": true,
+    ".idea": true,
+    ".jetclient": true,
+    ".prettierrc.js": true,
+    "index.js": true,
+    ".license-reportrc": true,
+    ".watchmanconfig": true,
+    "Gemfile": true,
+    "react-native.config.js": true,
+    "assets": true,
+    "package.json": true
+  },
+  "explorer.sortOrder": "foldersNestsFiles",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.tabSize": 4,
+  "editor.insertSpaces": false,
+  "editor.formatOnSave": true,
+  "editor.detectIndentation": false,
+  "javascript.validate.enable": false,
+  "editor.formatOnSaveMode": "modifications",
+  "files.trimTrailingWhitespace": true,
+  "editor.foldingImportsByDefault": true
+}
