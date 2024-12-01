@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useEffect, useState } from "react";
+import React, { memo, useCallback, useState } from "react";
 import { NavigationContainer, DarkTheme, DefaultTheme, useTheme, useNavigation, useFocusEffect } from '@react-navigation/native';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { FlatList, LogBox, ScrollView, useColorScheme } from "react-native";
@@ -126,7 +126,9 @@ const Detail = (props: any) => {
                 style={{
                     color: theme.colors.text,
                     backgroundColor: theme.colors.background,
-                    padding: 20
+                    padding: 20,
+					fontSize: 16,
+					fontWeight: "semibold"
                 }}
             >
                 {log}
