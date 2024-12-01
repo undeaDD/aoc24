@@ -18,6 +18,10 @@ This is an [Expo](https://expo.dev) project.
 
 3. Download "Expo Go" on your Phone
 
-4. Scan the QR-Code or connect via IP
+   ```
+   https://expo.dev/go
+   ```
+
+4. Scan the QR-Code or connect via local IP ( same network )
 
 5. Profit
