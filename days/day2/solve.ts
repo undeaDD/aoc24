@@ -5,6 +5,7 @@ export const solve = (print: (s: string) => void) => {
 
 	const reports = value.split("\n").slice(1, -1);
 
+	print("2. Calculated Safe Reports...");
 	var safeAmount = reports.reduce((acc: number, report: string) => {
 		let dir = 0;
 		const nums = report.split(' ').map(Number);
@@ -18,10 +19,10 @@ export const solve = (print: (s: string) => void) => {
 		) ? acc + 1 : acc;
 	}, 0);
 
-	print("2. Calculated Part 1:");
+	print("3. Calculated Part 1:");
     print("-> " + safeAmount.toString())
 
-	print("3. Calculated Unsafe Reports...");
+	print("4. Calculated new Safe Reports...");
 
 	safeAmount = 0;
 	reports.forEach(line => {
@@ -53,7 +54,7 @@ export const solve = (print: (s: string) => void) => {
 		}
 	});
 
-	print("2. Calculated Part 2:");
+	print("5. Calculated Part 2:");
     print("-> " + safeAmount.toString())
 
     return "";
