@@ -1,9 +1,10 @@
 import { value, test } from "./input";
 
 export const solve = (print: (s: string) => void) => {
-    print("1. Load User Input...");
+    print("1. Load User Input / Reports...");
 
 	const reports = value.split("\n").slice(1, -1);
+    print("-> " + reports.length.toString())
 
 	print("2. Calculated Safe Reports...");
 	var safeAmount = reports.reduce((acc: number, report: string) => {
