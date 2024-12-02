@@ -28,17 +28,18 @@ const Home = () => {
         }
     }
 
-    const renderItem = ({ item }: { item: Challenge }) => {
-        const isFirst = item.key === "1";
-        const isLast = item.key === "" + Challenges.length;
+    const renderItem = ({ item, index }: { item: Challenge, index: number }) => {
+        const isFirst = index === 0;
+        const isLast = index === Challenges.length - 1;
 
         return (
             <TouchableOpacity
                 activeOpacity={0.8}
-                onPress={() => navigation.push(`Day${item.key}`)}
+                onPress={() => navigation.push(`Day${index + 1}`)}
                 style={{
                     height: 55,
                     marginHorizontal: 12,
+					marginBottom: 1.5,
                     flex: 1,
                     backgroundColor: theme.colors.card,
                     justifyContent: "space-between",
@@ -69,13 +70,13 @@ const Home = () => {
                             fontWeight: "bold"
                         }}
                     >
-                        Day {item.key}
+                        Day {index + 1}
                     </Text>
                 </View>
                 <FontAwesome
                     name={"chevron-right"}
                     size={20}
-                    color={theme.colors.primary}
+                    color={theme.colors.text}
                 />
             </TouchableOpacity>
         )
@@ -83,9 +84,9 @@ const Home = () => {
 
     return (
         <FlatList
-            contentContainerStyle={{marginVertical: 10}}
+            contentContainerStyle={{marginVertical: 15}}
             contentInsetAdjustmentBehavior="automatic"
-            keyExtractor={(item) => item.key}
+            keyExtractor={(_, index) => index.toString()}
             renderItem={renderItem}
             data={Challenges}
         />
@@ -157,14 +158,14 @@ const App = () => {
                     }}
                 />
                 {
-                    Challenges.map((challenge) => (
+                    Challenges.map((challenge, index) => (
                         <Stack.Screen
-                            key={challenge.key}
-                            name={`Day${challenge.key}`}
+                            key={index.toString()}
+                            name={`Day${index + 1}`}
                             component={Detail}
                             initialParams={{item: challenge}}
                             options={{
-                                title: `Day ${challenge.key}`,
+                                title: `Day ${index + 1}`,
                             }}
                         />
                     ))
